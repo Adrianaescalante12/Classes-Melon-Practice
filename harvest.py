@@ -20,9 +20,9 @@ class MelonType(object):
 
         # Fill in the rest
 
-    def add_pairing(self, pairing):
+    def add_pairings(self, pairing):
         """Add a food pairing to the instance's pairings list."""
-        self.pairing(pairing)
+        self.pairings.append(pairing)
         # Fill in the rest
 
     def update_code(self, new_code):
@@ -75,16 +75,19 @@ def make_melon_types():
     )
     
 
-    musk.add_pairing('mint')
-    cas.add_pairing(['strawberry','mint'])
-    cren.add_pairing('proscuitto')
-    yw.add_pairing('ice cream')
+    musk.add_pairings("mint")
+    cas.add_pairings(["strawberry","mint"])
+    cren.add_pairings("proscuitto")
+    yw.add_pairings("ice cream")
 
 
     return all_melon_types
 
+
 def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
+    # self.pairing("{} pairs with".format(melon))
+    melon_types.pairing("{}.name pairs with".format(melon))
 
     # Fill in the rest
 
